@@ -1,58 +1,87 @@
 import { Button } from "antd";
-import { Card } from "components/core/Card";
+import { PackageItem } from "components/core/PackageItem";
 import { type NextPage } from "next";
+import Head from "next/head";
 import Image from "next/image";
 
 const menu = [
   {
-    id: 1,
-    packageName: "Sweetest Package",
-    packageItems:
+    name: "Sweetest Package",
+    description:
       "Turon, ensaymada, and Leche Flan - perfect dessert for sharing",
-    packageImg: "/sweetest package.jpg",
+    img: "/sweetest package.jpg",
   },
   {
-    id: 2,
-    packageName: "Kakanin Package",
-    packageItems: "Ube calamay, puto and sapin-sapin for sharing",
-    packageImg: "/kakanin package.jpg",
+    name: "Kakanin Package",
+    description: "Ube calamay, puto and sapin-sapin for sharing",
+    img: "/kakanin package.jpg",
   },
   {
-    id: 3,
-    packageName: "Merienda Package",
-    packageItems: "Halo-halo, bananaque and spanish bread for sharing",
-    packageImg: "/merienda package.jpg",
+    name: "Merienda Package",
+    description: "Halo-halo, bananaque and spanish bread for sharing",
+    img: "/merienda package.jpg",
   },
   {
-    id: 4,
-    packageName: "Sweetest Drinks Package",
-    packageItems: "Taho and sago't gulaman for sharing",
-    packageImg: "/sweet drinks package.jpg",
+    name: "Sweetest Drinks Package",
+    description: "Taho and sago't gulaman for sharing",
+    img: "/sweet drinks package.jpg",
   },
 ];
-
-const mappedMenu = menu.map((menuItem) => (
-  <Card key={menu.id} menu={menuItem} />
-));
 
 const Home: NextPage = () => {
   return (
     <div>
-      <div className="flex w-full  flex-col items-center justify-around bg-pink-100 p-5 lg:flex-row">
-        <Image src="/favicon.ico" alt="placeholder" width="40" height="40" />
-        <h2 className="text-4xl text-rose-600">From PH with Love</h2>
-        <Button
-          className="border-rose-600 text-rose-600"
-          size="large"
-          shape="round"
-          onClick={() => {
-            alert("clicked");
-          }}
-        >
-          Order Here
-        </Button>
-      </div>
-      <div className=" bg-pink-300">{mappedMenu}</div>
+      <Head>
+        <title>From PH with Love</title>
+        <meta property="og:title" content="From PH with Love" key="title" />
+      </Head>
+      <section className="grid bg-pink-100 md:grid-cols-[minmax(500px,_1fr)_auto]">
+        <div className="mb-2 flex flex-col items-center justify-center gap-2 p-8">
+          <h1 className="text-center text-6xl text-rose-600">
+            From PH with Love
+          </h1>
+          <p className="text-center text-xl text-rose-600">
+            authentic and homemade Filipino desserts and goodies delivered to
+            you
+          </p>
+          <Button
+            className=" bg-rose-600 text-white"
+            size="large"
+            shape="round"
+            onClick={() => {
+              alert("clicked");
+            }}
+          >
+            Order Now!
+          </Button>
+        </div>
+        <div className="relative">
+          <Image src="/hero.jpg" alt="placeholder" height="800" width="800" />
+        </div>
+      </section>
+
+      <PackageItem
+        name={menu[0].name}
+        description={menu[0].description}
+        img={menu[0].img}
+      />
+      <PackageItem
+        className="flex-row-reverse"
+        name={menu[1].name}
+        description={menu[1].description}
+        img={menu[1].img}
+      />
+      <PackageItem
+        name={menu[2].name}
+        description={menu[2].description}
+        img={menu[2].img}
+      />
+      <PackageItem
+        className="flex-row-reverse"
+        name={menu[3].name}
+        description={menu[3].description}
+        img={menu[3].img}
+      />
     </div>
   );
 };
