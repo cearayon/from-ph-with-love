@@ -1,16 +1,18 @@
 export interface IButtonProps {
   text: string;
-  className: string;
   onClick?: () => void;
 }
 
 export const Button: React.FC<IButtonProps> = ({
   text,
-  className,
+
   onClick,
 }) => {
   return (
-    <button className={className} onClick={onClick}>
+    <button
+      className="rounded-full bg-rose-600 p-4 text-center text-white"
+      onClick={onClick}
+    >
       {text}
     </button>
   );
