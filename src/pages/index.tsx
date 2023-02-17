@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import Button from "components/core/Button";
 import { PackageItem } from "components/core/PackageItem";
 import { type NextPage } from "next";
 import Head from "next/head";
@@ -45,15 +45,11 @@ const Home: NextPage = () => {
             you
           </p>
           <Button
-            className=" bg-rose-600 text-white"
-            size="large"
-            shape="round"
+            text="Order Now!"
             onClick={() => {
               alert("clicked");
             }}
-          >
-            Order Now!
-          </Button>
+          />
         </div>
         <div className="relative">
           <Image src="/hero.jpg" alt="placeholder" height="800" width="800" />
@@ -66,7 +62,7 @@ const Home: NextPage = () => {
         img={menu[0].img}
       />
       <PackageItem
-        className="flex-row-reverse"
+        reversed
         name={menu[1].name}
         description={menu[1].description}
         img={menu[1].img}
@@ -77,7 +73,7 @@ const Home: NextPage = () => {
         img={menu[2].img}
       />
       <PackageItem
-        className="flex-row-reverse"
+        reversed
         name={menu[3].name}
         description={menu[3].description}
         img={menu[3].img}
