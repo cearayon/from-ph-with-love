@@ -6,13 +6,13 @@
       ],
       "files": ["*.ts", "*.tsx"],
       "parserOptions": {
-        "project": "from-ph-with-love/tsconfig.json"
+        "project": "tsconfig.json"
       }
     }
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "from-ph-with-love/tsconfig.json"
+    "project": "from-ph-with-love"
   },
   "plugins": ["@typescript-eslint"],
   "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
