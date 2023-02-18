@@ -10,6 +10,7 @@ export const Footer = () => {
       <h3 className="text-xl text-gray-300">THIS IS AN EXAMPLE</h3>
       <h3 className="text-xl text-gray-300">THIS IS AN EXAMPLE</h3>
       <h3 className="text-xl text-gray-300">THIS IS AN EXAMPLE</h3>
+      <h3 className="text-xl text-gray-300">TESTING VERCEL DEPLOYMENT</h3>
     </div>
   );
 };
