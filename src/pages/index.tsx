@@ -1,4 +1,5 @@
 import Button from "components/core/Button";
+import { Footer } from "components/core/Footer";
 import { PackageItem } from "components/core/PackageItem";
 import { type NextPage } from "next";
 import Head from "next/head";
@@ -78,6 +79,7 @@ const Home: NextPage = () => {
         description={menu[3].description}
         img={menu[3].img}
       />
+      <Footer></Footer>
     </div>
   );
 };
