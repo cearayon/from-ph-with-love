@@ -18,10 +18,12 @@ export const PackageItem: React.FC<IPackageItemProps> = ({
 
       <div
         className={`${
-          reversed ? "col-start-1 row-start-1" : ""
-        } flex flex-col place-content-center gap-2 px-40`}
+          reversed ? "row-start-1 md:col-start-1" : ""
+        } flex flex-col place-content-center gap-2`}
       >
-        <h2 className="text-center text-6xl text-rose-600">{name}</h2>
+        <h2 className="text-center  text-4xl text-rose-600 md:text-6xl">
+          {name}
+        </h2>
         <p className="text-center text-xl text-rose-600">{description}</p>
       </div>
     </section>
