@@ -35,6 +35,12 @@ const Home: NextPage = () => {
       <Head>
         <title>From PH with Love</title>
         <meta property="og:title" content="From PH with Love" key="title" />
+        <script defer src="/your-path-to-fontawesome/js/brands.js"></script>
+        <script defer src="/your-path-to-fontawesome/js/solid.js"></script>
+        <script
+          defer
+          src="/your-path-to-fontawesome/js/fontawesome.js"
+        ></script>
       </Head>
       <section className="grid bg-pink-100 md:grid-cols-[minmax(500px,_1fr)_auto]">
         <div className="mb-2 flex flex-col items-center justify-center gap-2 p-8">
