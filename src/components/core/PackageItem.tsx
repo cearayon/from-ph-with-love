@@ -14,7 +14,7 @@ export const PackageItem: React.FC<IPackageItemProps> = ({
   return (
     <section className="grid grid-cols-2 items-center bg-pink-100">
       {/* <Image src={img} alt={name} fill /> */}
-      <img src={img} alt={name} className="w-full" />
+      <img src={img} alt={name} className="h-full w-full" />
 
       <div
         className={`${

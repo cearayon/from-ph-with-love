@@ -4,6 +4,7 @@ import { PackageItem } from "components/core/PackageItem";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Script from "next/script";
 import { useRef } from "react";
 
 const menu = [
@@ -11,22 +12,22 @@ const menu = [
     name: "Sweetest Package",
     description:
       "Turon, ensaymada, and Leche Flan - perfect dessert for sharing",
-    img: "/sweetest package.jpg",
+    img: "/sweetest package.png",
   },
   {
     name: "Kakanin Package",
     description: "Ube calamay, puto and sapin-sapin for sharing",
-    img: "/kakanin package.jpg",
+    img: "/kakanin package.png",
   },
   {
     name: "Merienda Package",
     description: "Halo-halo, bananaque and spanish bread for sharing",
-    img: "/merienda package.jpg",
+    img: "/merienda package.png",
   },
   {
     name: "Sweetest Drinks Package",
     description: "Taho and sago't gulaman for sharing",
-    img: "/sweet drinks package.jpg",
+    img: "/sweetest drinks package.png",
   },
 ];
 
@@ -38,13 +39,12 @@ const Home: NextPage = () => {
       <Head>
         <title>From PH with Love</title>
         <meta property="og:title" content="From PH with Love" key="title" />
-        <script defer src="/your-path-to-fontawesome/js/brands.js"></script>
-        <script defer src="/your-path-to-fontawesome/js/solid.js"></script>
-        <script
-          defer
-          src="/your-path-to-fontawesome/js/fontawesome.js"
-        ></script>
       </Head>
+
+      <Script defer src="/your-path-to-fontawesome/js/brands.js"></Script>
+      <Script defer src="/your-path-to-fontawesome/js/solid.js"></Script>
+      <Script defer src="/your-path-to-fontawesome/js/fontawesome.js"></Script>
+
       <section className="grid bg-pink-100 md:grid-cols-[minmax(500px,_1fr)_auto]">
         <div className="mb-2 flex flex-col items-center justify-center gap-2 p-8">
           <h1 className="text-center text-6xl text-rose-600">
@@ -86,8 +86,14 @@ const Home: NextPage = () => {
         description={menu[3].description}
         img={menu[3].img}
       />
+      <section className="flex flex-col bg-pink-100">
+        <h2>What To Expect</h2>
+        <div className="flex">
+          <div className="rounded-full"></div>
+        </div>
+      </section>
       <div ref={scrollToFooter}>
-        <Footer></Footer>
+        <Footer />
       </div>
     </div>
   );
