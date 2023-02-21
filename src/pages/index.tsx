@@ -4,6 +4,7 @@ import { PackageItem } from "components/core/PackageItem";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useRef } from "react";
 
 const menu = [
   {
@@ -30,6 +31,8 @@ const menu = [
 ];
 
 const Home: NextPage = () => {
+  const scrollToFooter = useRef();
+
   return (
     <div>
       <Head>
@@ -53,9 +56,7 @@ const Home: NextPage = () => {
           </p>
           <Button
             text="Order Now!"
-            onClick={() => {
-              alert("clicked");
-            }}
+            onClick={() => scrollToFooter.current.scrollIntoView()}
           />
         </div>
         <div className="relative">
@@ -85,7 +86,9 @@ const Home: NextPage = () => {
         description={menu[3].description}
         img={menu[3].img}
       />
-      <Footer></Footer>
+      <div ref={scrollToFooter}>
+        <Footer></Footer>
+      </div>
     </div>
   );
 };
