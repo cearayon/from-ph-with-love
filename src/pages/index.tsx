@@ -34,6 +34,12 @@ const menu = [
 const Home: NextPage = () => {
   const footerRef = useRef<HTMLDivElement>(null);
 
+  // useEffect(() => {
+  //   if (footerRef.current != null)
+  //     // ⛔️ Object is possibly 'null'.ts(2531)
+  //     footerRef.current.focus();
+  // }, []);
+
   return (
     <div>
       <Head>
@@ -56,7 +62,9 @@ const Home: NextPage = () => {
           </p>
           <Button
             text="Order Now!"
-            onClick={() => footerRef.current.scrollIntoView()}
+            onClick={() => {
+              if (footerRef.current != null) footerRef.current.scrollIntoView();
+            }}
           />
         </div>
         <div className="relative">
