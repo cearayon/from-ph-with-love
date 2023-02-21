@@ -32,7 +32,7 @@ const menu = [
 ];
 
 const Home: NextPage = () => {
-  const scrollToFooter = useRef();
+  const footerRef = useRef<HTMLDivElement>(null);
 
   return (
     <div>
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
           </p>
           <Button
             text="Order Now!"
-            onClick={() => scrollToFooter.current.scrollIntoView()}
+            onClick={() => footerRef.current.scrollIntoView()}
           />
         </div>
         <div className="relative">
@@ -86,13 +86,17 @@ const Home: NextPage = () => {
         description={menu[3].description}
         img={menu[3].img}
       />
-      <section className="flex flex-col bg-pink-100">
-        <h2>What To Expect</h2>
+      <section className="flex flex-col items-center bg-pink-100 p-4">
+        <h2 className="text-6xl text-rose-600">What To Expect</h2>
         <div className="flex">
+          <div className="rounded-full"></div>
+
+          <div className="rounded-full"></div>
+
           <div className="rounded-full"></div>
         </div>
       </section>
-      <div ref={scrollToFooter}>
+      <div ref={footerRef}>
         <Footer />
       </div>
     </div>
