@@ -1,4 +1,5 @@
 import Button from "components/core/Button";
+import { ExpectationItem } from "components/core/ExpectationItem";
 import { Footer } from "components/core/Footer";
 import { PackageItem } from "components/core/PackageItem";
 import { type NextPage } from "next";
@@ -33,12 +34,6 @@ const menu = [
 
 const Home: NextPage = () => {
   const footerRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   if (footerRef.current != null)
-  //     // ⛔️ Object is possibly 'null'.ts(2531)
-  //     footerRef.current.focus();
-  // }, []);
 
   return (
     <div>
@@ -94,14 +89,24 @@ const Home: NextPage = () => {
         description={menu[3].description}
         img={menu[3].img}
       />
-      <section className="flex flex-col items-center bg-pink-100 p-4">
-        <h2 className="text-6xl text-rose-600">What To Expect</h2>
-        <div className="flex">
-          <div className="rounded-full"></div>
-
-          <div className="rounded-full"></div>
-
-          <div className="rounded-full"></div>
+      <section className="flex flex-col items-center bg-pink-100 p-8">
+        <h2 className="mb-4 text-center text-4xl text-rose-600">
+          What To Expect
+        </h2>
+        <div className="flex flex-col items-center gap-8 md:flex-row">
+          <ExpectationItem
+            label="AUTHENTIC FOOD"
+            description="Homemade desserts with authentic Filipino ingredients and recipes"
+          />
+          <ExpectationItem
+            label="DOOR TO DOOR DELIVERY"
+            description="Our service includes food delivery"
+          />
+          <ExpectationItem
+            label="UPCOMING GOODIES"
+            description=" We are preparing to launch other FIlipino goodies, recipes and
+              bigger menu"
+          />
         </div>
       </section>
       <div ref={footerRef}>
