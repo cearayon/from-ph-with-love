@@ -9,12 +9,12 @@ export const Footer = () => {
 
         <span className="flex items-center gap-4 py-2">
           <PhoneIcon className=" h-8 w-8" />
-          <h3 className="base text-white">480-298-0720</h3>
+          <h3 className="base text-white">(623) 980-9164</h3>
         </span>
 
         <span className="flex items-center gap-4">
           <EnvelopeIcon className="h-8 w-8" />
-          <h3 className="text-base text-white">cearayon@gmail.com</h3>
+          <h3 className="text-base text-white">franciscoalthea@gmail.com</h3>
         </span>
       </div>
 
@@ -22,8 +22,8 @@ export const Footer = () => {
         <h2 className="text-xl text-white">Follow Us</h2>
 
         <span className="flex gap-4 p-4">
-          <SocialIcon url="https://www.instagram.com/carrrrlowwww/" />
-          <SocialIcon url="https://www.facebook.com/carlo.arayon" />
+          <SocialIcon url="https://www.instagram.com" />
+          <SocialIcon url="https://www.facebook.com" />
           <SocialIcon url="https://discord.com/" />
           <SocialIcon url="https://twitter.com/" />
         </span>
