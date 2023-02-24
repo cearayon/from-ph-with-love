@@ -100,11 +100,11 @@ const Home: NextPage = () => {
           />
           <ExpectationItem
             label="DOOR TO DOOR DELIVERY"
-            description="Our service includes food delivery"
+            description="Our service includes food delivery straight to your door"
           />
           <ExpectationItem
             label="UPCOMING GOODIES"
-            description=" We are preparing to launch other FIlipino goodies, recipes and
+            description=" We are preparing to launch other FIlipino goodies, recipes and a
               bigger menu"
           />
         </div>
