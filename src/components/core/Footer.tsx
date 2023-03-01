@@ -3,7 +3,7 @@ import { SocialIcon } from "react-social-icons";
 
 export const Footer = () => {
   return (
-    <div className="flex flex-col items-center bg-zinc-800 p-4 md:flex-row md:items-start md:justify-between md:px-8">
+    <footer className="flex flex-col items-center bg-zinc-800 p-4 md:flex-row md:items-start md:justify-between md:px-8">
       <div className="mb-4">
         <h2 className="text-xl text-white">Contact Us</h2>
 
@@ -28,6 +28,6 @@ export const Footer = () => {
           <SocialIcon url="https://twitter.com/" />
         </span>
       </div>
-    </div>
+    </footer>
   );
 };

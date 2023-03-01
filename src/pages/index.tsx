@@ -89,7 +89,7 @@ const Home: NextPage = () => {
         description={menu[3].description}
         img={menu[3].img}
       />
-      <section className="flex flex-col items-center bg-pink-100 p-8">
+      <section className="bg-pink-100 p-8">
         <h2 className="mb-4 text-center text-4xl text-rose-600">
           What To Expect
         </h2>
