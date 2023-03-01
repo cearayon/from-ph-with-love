@@ -93,7 +93,7 @@ const Home: NextPage = () => {
         <h2 className="mb-4 text-center text-4xl text-rose-600">
           What To Expect
         </h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {/* <div className="flex flex-col items-center gap-8 md:flex-row"> */}
           <ExpectationItem
             label="AUTHENTIC FOOD"
@@ -108,7 +108,7 @@ const Home: NextPage = () => {
             description=" We are preparing to launch other Filipino goodies, recipes and a
               bigger menu"
           />
-        </div>
+        </section>
       </div>
       <div ref={footerRef}>
         <Footer />
