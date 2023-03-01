@@ -89,11 +89,11 @@ const Home: NextPage = () => {
         description={menu[3].description}
         img={menu[3].img}
       />
-      <div className="flex flex-col items-center bg-pink-100 p-8">
+      <section className="flex flex-col items-center bg-pink-100 p-8">
         <h2 className="mb-4 text-center text-4xl text-rose-600">
           What To Expect
         </h2>
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {/* <div className="flex flex-col items-center gap-8 md:flex-row"> */}
           <ExpectationItem
             label="AUTHENTIC FOOD"
@@ -108,8 +108,8 @@ const Home: NextPage = () => {
             description=" We are preparing to launch other Filipino goodies, recipes and a
               bigger menu"
           />
-        </section>
-      </div>
+        </div>
+      </section>
       <div ref={footerRef}>
         <Footer />
       </div>
