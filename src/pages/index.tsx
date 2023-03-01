@@ -93,8 +93,8 @@ const Home: NextPage = () => {
         <h2 className="mb-4 text-center text-4xl text-rose-600">
           What To Expect
         </h2>
-        <div className="grid grid-cols-1 grid-rows-3 gap-8 lg:grid-cols-3">
-          {/* <div className="flex flex-col items-center gap-8 md:flex-row"> */}
+        {/* <div className="grid grid-cols-1 grid-rows-3 gap-8 lg:grid-cols-3"> */}
+        <div className="flex flex-col items-center gap-8 md:flex-row">
           <ExpectationItem
             label="AUTHENTIC FOOD"
             description="Homemade desserts with authentic Filipino ingredients and recipes"
